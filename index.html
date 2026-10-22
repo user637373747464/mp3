@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="MP3">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<title>MP3</title>
+</head>
+<body>
+<main id="appareil">
+
+  <section id="ecran-cadre" aria-label="Écran">
+    <div id="ecran" class="clair">
+      <header id="barre"><span id="barre-titre">MP3</span><span id="barre-etat"></span></header>
+      <div id="vue"></div>
+      <div id="msg" class="cache" role="status"></div>
+      <div id="reflet"></div>
+    </div>
+  </section>
+
+  <section id="roue" aria-label="Molette">
+    <span class="lbl l-menu">MENU</span>
+    <svg class="lbl l-precedent" viewBox="0 0 24 24" aria-label="Précédent"><path d="M6 5v14M19 5L9 12l10 7z"/></svg>
+    <svg class="lbl l-suivant" viewBox="0 0 24 24" aria-label="Suivant"><path d="M18 5v14M5 5l10 7-10 7z"/></svg>
+    <svg class="lbl l-play" viewBox="0 0 24 24" aria-label="Lecture / pause"><path d="M3 5l9 7-9 7z"/><path d="M15 5v14M20 5v14"/></svg>
+    <div id="centre" aria-label="Choisir"></div>
+  </section>
+
+</main>
+<input id="f-audio" type="file" class="cache" multiple accept="audio/*,.mp3,.m4a,.aac,.wav,.flac,.ogg">
+<input id="f-image" type="file" class="cache" accept="image/*">
+
+<script src="db.js"></script>
+<script src="tags.js"></script>
+<script src="lecteur.js"></script>
+<script src="roue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
